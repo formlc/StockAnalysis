@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<title>Stock Search</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ 	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+	<script type="text/javascript" src="assets/javascript/logic.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+</head>
+
+
+<body class="green lighten-4">
+
+    <nav class="row white">
+
+        <div class="col s2">
+
+            <a class="btn btn-floating btn-large left-align dropdown-button" data-activates="menu-dropdown"><i class="material-icons">menu</i></a>
+
+            <a class="btn btn-floating btn-large right-align"><i class="material-icons">cloud</i></a>
+
+            <a class="btn btn-floating btn-large pulse left-align dropdown-button" id="add-stock"><i class="material-icons">add_circle_outline</i></a>
+
+        </div>
+
+        <div class="col s1 teal" style="height: 64px;"><input type="text" name="name" id="stock-input"></div>
+        
+        <span class="center-align col s6 custom-head">STOCKHUB</span>
+
+    </nav>
+
+        <div class="row">
+
+            <div class="panel" id="panel-border-color">
+
+            </div>
+
+        </div>
+        
+        <div class="row">
+            
+            <div class="panel-heading button-area teal lighten-3" id="panel-color"></div>
+
+            <div class="col l8">
+
+                <div class="panel panel-primary" id="panel-border-color">
+
+                    <div class="panel-heading" id="panel-color">
+
+                        <h3 class="panel-title">Daily Price Chart</h3>
+
+                    </div>
+
+                </div>
+
+                <div class="panel-body" id="result-panel-left">
+                    
+                </div>
+                
+            </div>
+
+            <div class="col s1"></div>
+
+            <div class="col l2 teal lighten-3 round-corners">
+
+                <div class="panel panel-primary">
+
+                    <div class="panel" id="Currency">
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Currency</th>
+                                    <th>Rate</th>
+                                    <th>Currency</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbodycurrency">
+
+                            </tbody>
+                        </table>
+                        
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col l8">
+
+                <div class="panel panel-primary" id="panel-border-color">
+
+                    <div class="panel-heading" id="panel-color">
+
+                        <h3 class="panel-title">Candlestick Chart</h3>
+
+                    </div>
+
+                </div>
+
+                <div class="panel-body" id="result-panel-right">
+                    
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col l8">
+
+                <div class="panel panel-primary" id="panel-border-color">
+
+                    <div class="panel-heading" id="panel-color">
+                        
+                        <h3 class="panel-title">Products</h3>
+                    
+                    </div>
+
+                </div>
+
+                <div class="panel-body" id="body-table">
+
+                    <table class="table table-responsive">
+
+                        <tbody id="tbody-new-row">
+                                 
+                         </tbody>
+
+                    </table>
+                        
+                </div>
+
+            </div>
+                
+        </div>
+    
+    </div>
+
+</body>
+</html>

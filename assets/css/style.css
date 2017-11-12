@@ -1,0 +1,30 @@
+.button-area {
+	color: teal;
+}
+
+#result-panel-left {
+	border-bottom: 5px;
+	border-color: black;
+}
+
+.custom-head {
+	color: 	#556B2F;
+	font-size: 66px;
+	opacity: .5;
+}
+
+.button-area {
+	border-bottom: 10px;
+	border-color: #556B2F;
+}
+
+.round-corners {
+	border-radius: 15px;
+	margin-top: 50px;
+}
+
+.image-border {
+	max-width: 200px;
+	max-height: 200px;
+}
+
